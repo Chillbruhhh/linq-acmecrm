@@ -14,10 +14,10 @@ docker build -t linq-crm-integration .
 docker run -p 8200:8200 linq-crm-integration
 ```
 
-### Option 2: Local Development
+### Option 2: Python Deployment
 ```bash
 # Start backend
-uvicorn main:app --reload --port 8200
+python main.py
 
 # Open frontend
 start_frontend.bat
