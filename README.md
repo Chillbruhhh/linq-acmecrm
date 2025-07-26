@@ -62,8 +62,6 @@ Use these mock JWT tokens:
 ✅ Docker containerization
 
 
-````markdown
-
 ##  Data Flow
 
 ```mermaid
