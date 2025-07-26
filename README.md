@@ -2,6 +2,8 @@
 
 FastAPI service demonstrating Linq's CRM integration capabilities.
 
+Loom Style Video: https://drive.google.com/file/d/13Qp-sx_uYf3PCYdyfG0zrSTR5vFQZsAf/view?usp=drive_link
+
 ##  Quick Start
 
 ### Option 1: Docker (Recommended)
@@ -48,7 +50,6 @@ Use these mock JWT tokens:
 - `frontend/` - HTML demo (port 8080)
 - `models/` - Pydantic models
 - `services/` - Business logic
-- `tests/` - Unit tests
 
 ##  Features
 ✅ FastAPI backend  
