@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linq-AcmeCRM Integration Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Linq-AcmeCRM Integration Demo</h1>
+            <p>Test the FastAPI integration service for Linq Sales Engineer assessment</p>
+        </header>
+
+        <div class="section">
+            <h2>Create Contact</h2>
+            <form id="createContactForm">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="token">JWT Token *</label>
+                    <select id="token" name="token" required>
+                        <option value="">Select a token...</option>
+                        <option value="linq-demo-token">Demo Token</option>
+                        <option value="linq-assessment-token">Assessment Token</option>
+                        <option value="linq-sales-engineer">Sales Engineer Token</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Create Contact</button>
+            </form>
+            
+            <div id="createResult" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Get All Contacts</h2>
+            <div class="form-group">
+                <label for="getToken">JWT Token *</label>
+                <select id="getToken" name="getToken" required>
+                    <option value="">Select a token...</option>
+                    <option value="linq-demo-token">Demo Token</option>
+                    <option value="linq-assessment-token">Assessment Token</option>
+                    <option value="linq-sales-engineer">Sales Engineer Token</option>
+                </select>
+            </div>
+            
+            <button onclick="getContacts()">Get Contacts</button>
+            
+            <div id="contactsResult" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>API Information</h2>
+            <ul>
+                <li><strong>Base URL:</strong> <code>http://localhost:8200</code></li>
+                <li><strong>API Docs:</strong> <a href="http://localhost:8200/docs" target="_blank">Swagger UI</a></li>
+                <li><strong>Health Check:</strong> <a href="http://localhost:8200/health" target="_blank">/health</a></li>
+                <li><strong>Field Mapping:</strong> <a href="http://localhost:8200/mapping/schema" target="_blank">/mapping/schema</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
